@@ -1,0 +1,11 @@
+version: '3'
+services:
+  courses:
+    build: • /courses
+    container name:
+    ports:'3000:3000'
+    volumes :
+      - ./courses:/app
+      - ./course/node_modules
+    stdin_open: true
+    tty: true

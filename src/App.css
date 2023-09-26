@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
+/* making top input section responsive */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media all and ( max-width:850px) {
+  .input-section {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
   }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+.add-course-section {
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 250px;
+}
+
+.text-input {
+  padding: 10px 10px;
+  margin-inline: 10px;
+  /* height: 20%; */
+  outline: none;
+  /* max-width: 200px; */
+}
+
+.add-course-section >  .text-input {
+  width: 60%;
+}
+
+.instances-check-area > .text-input {
+  width:100px ;
+}
+
+
+.primary-btn {
+  padding: 10px 15px;
+  background: rgb(45, 114, 226);
+  outline: none;
+  border: 0px;
+  color: rgb(255, 248, 248);
+  border-radius: 5px;
+}
+
+.instance-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid rgb(43, 226, 55);
+}
+
+@media all and ( min-width:850px) {
+  .input-section {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    
+  }
+}
+
+
+.instance-box > div {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content:center;
+  /* border: 10px solid yellow; */
+  width: 60%;
+}
+
+.instance-box > div * {
+  margin: 5px;
+}
+
+.instance-box input {
+  padding: 8px 4px;
+  width: 30%;
+}
+
+.dropdownmenu {
+  outline: none;
+  border: 0px;
+  width: 40%;
+  max-width: 150px;
+}
+
+.instance-box > div > button {
+  padding: 0.1px 8px;
+  font-size: 9px;
+  border-radius: 6px;
+  background: rgb(45, 114, 226);
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+/* tables styling */
+
+.courses-table {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.courses-table th {
+  text-align: left;
+  background:  rgb(90, 128, 251);
+  padding: 10px 10px;
+  color:white;
+  text-shadow: 1px 1px 5px gray;
+  font-weight: normal;
 }
+
+.courses-table td  {
+  padding: 5px 10px;
+}
+
+#courses-table tr:nth-child(odd) {
+  background: #EDF1FE;
+}
+
+/* styling show instances  */
+
+.instance-inputBox {
+  margin-bottom: 10px;
+}
+
+.instance-inputBox * {
+  margin: 5px;
+}
+
+
